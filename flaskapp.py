@@ -10,7 +10,7 @@ import requests
 from config import API_KEY, MAC_ADDRESS
 import pytz
 import sqlite3
-from appDhtWebHist import getLastData, getHistData, maxRowsTable
+#from appDhtWebHist import getLastData, getHistData, maxRowsTable
 
 app = Flask(__name__)
 
