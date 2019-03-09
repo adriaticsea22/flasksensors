@@ -1,7 +1,7 @@
 # flaskapp.py
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlab.figure import Figure
-import io
+#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+#from matplotlab.figure import Figure
+#import io
 from flask import Flask, render_template, send_file, make_response, request
 import datetime
 import os
