@@ -56,41 +56,41 @@ def write_data_point(api_key, mac, field, data):
 	else:
 		return render_template("403.html")
 
-@app.route('/plot/temp')
-def plot_temp():
-	times, temps, hums = getHistData(numSamples)
-	ys = temps
-	fig = Figure()
-	axis = fig.add_subplot(1,1,1)
-	axis.set_title("Temperature [°C]")
-	axis.set_xlabel("Samples")
-	axis.grid(True)
-	xs = range(numSamples)
-	axis.plot(xs, ys)
-	canvas = FigureCanvas(fig)
-	output = io.BytesIO()
-	canvas.print_png(output)
-	response = make_response(output.getvalue())
-	response.mimetype = 'image/png'
-	return response
+# @app.route('/plot/temp')
+# def plot_temp():
+# 	times, temps, hums = getHistData(numSamples)
+# 	ys = temps
+# 	fig = Figure()
+# 	axis = fig.add_subplot(1,1,1)
+# 	axis.set_title("Temperature [°C]")
+# 	axis.set_xlabel("Samples")
+# 	axis.grid(True)
+# 	xs = range(numSamples)
+# 	axis.plot(xs, ys)
+# 	canvas = FigureCanvas(fig)
+# 	output = io.BytesIO()
+# 	canvas.print_png(output)
+# 	response = make_response(output.getvalue())
+# 	response.mimetype = 'image/png'
+# 	return response
 
-@app.route('/plot/hum')
-def plot_hum():
-	times, temps, hums = getHistData(numSamples)
-	ys = hums
-	fig = Figure()
-	axis = fig.add_subplot(1,1,1)
-	axis.set_title("Humidity [%]")
-	axis.set_xlabel("Samples")
-	axis.grid(True)
-	xs = range(numSamples)
-	axis.plot(xs, ys)
-	canvas = FigureCanvas(fig)
-	output = io.BytesIO()
-	canvas.print_png(output)
-	response = make_response(output.getvalue())
-	response.mimetype = 'image/png'
-	return response
+# @app.route('/plot/hum')
+# def plot_hum():
+# 	times, temps, hums = getHistData(numSamples)
+# 	ys = hums
+# 	fig = Figure()
+# 	axis = fig.add_subplot(1,1,1)
+# 	axis.set_title("Humidity [%]")
+# 	axis.set_xlabel("Samples")
+# 	axis.grid(True)
+# 	xs = range(numSamples)
+# 	axis.plot(xs, ys)
+# 	canvas = FigureCanvas(fig)
+# 	output = io.BytesIO()
+# 	canvas.print_png(output)
+# 	response = make_response(output.getvalue())
+# 	response.mimetype = 'image/png'
+# 	return response
 
 #def update(api_key, mac, field, data):
 #	return render_template("update.html", data=data)
