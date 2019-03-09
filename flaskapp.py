@@ -24,7 +24,6 @@ if not os.path.isfile('data.db'):
 		mac text,
 		field text,
 		data real
-
 		)""")
 	conn.commit()
 	conn.close()
@@ -112,9 +111,9 @@ def write_data_point(api_key, mac, field, data):
 def index():
 	conn = sqlite3.connect('data.db')
 	c = conn.cursor()
-	c.execute("SELECT data, date_time, MAX(rowid) FROM data WHERE field=temp")
+	c.execute("SELECT data, date_time, MAX(rowid) FROM data WHERE field='temp'")
 	row1 = c.fetchone()
-	c.execute("SELECT data, date_time, MAX(rowid) FROM data WHERE field=hum")
+	c.execute("SELECT data, date_time, MAX(rowid) FROM data WHERE field='hum'")
 	row2 = c.fetchone()
 	c.close()
 	conn.close()
