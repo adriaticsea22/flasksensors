@@ -22,7 +22,7 @@ if not os.path.isfile('data.db'):
 		API_key text,
 		date_time text,
 		mac text,
-		field string,
+		field text,
 		data real
 		)""")
 	conn.commit()
