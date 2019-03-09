@@ -1,0 +1,38 @@
+<!-- /templates/showrecent.html -->
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>read temp</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5">
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+<div class="jumbotron">
+	<hr class="my-4">
+	<h1 class="display-4"> {{ data }}</h1>
+	<p class="lead">Most Recent Data Point</p>
+	<hr class="my-4">
+	<h1 class="display-4"> {{ time_stamp }}</h1>
+	<p class="lead">Most Recent Time Zone: EST</p>
+	<hr class="my-4">
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="/showrecent.html" role="button">REFRESH</a>
+	</p>
+</div>
+
+</div>
+
+</body>
+</html>
